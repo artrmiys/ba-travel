@@ -1,0 +1,39 @@
+import BaMap from "../components/BaMap";
+import Globe3D from "../components/Globe3D";
+import BaItinerary from "../components/BaItinerary";
+import { BuenosAiresAfterMap } from "../components/BuenosAiresAfterMap";
+import { ATLAS } from "../data/atlas";
+
+export default function BuenosAires() {
+  return (
+    <div className="page">
+      <div className="wrap">
+        <div className="kicker">ARGENTINA</div>
+        <h1 className="h1">Buenos Aires</h1>
+        <div className="sub">Список мест с быстрыми ссылками</div>
+
+        {/* 1) ГЛОБУС */}
+        <section className="panel" style={{ marginTop: 16 }}>
+          <div className="panelTitle">Глобус</div>
+          <div className="sub">Точки = города из Atlas. Клик по точке — открыть страницу.</div>
+
+          <div className="globeFrame globeFrameLarge" style={{ marginTop: 12 }}>
+            <Globe3D
+              atlas={ATLAS}
+              onSelect={(countrySlug, citySlug) => {
+                window.location.hash = `/${countrySlug}/${citySlug}`;
+              }}
+            />
+          </div>
+        </section>
+
+        {/* 2) КАРТА */}
+        <BaMap />
+
+        {/* дальше контент */}
+        <BuenosAiresAfterMap />
+        <BaItinerary />
+      </div>
+    </div>
+  );
+}

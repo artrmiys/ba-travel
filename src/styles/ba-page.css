@@ -1,0 +1,210 @@
+/* Scoped styles for Buenos Aires page (no conflicts with Atlas) */
+.baPage{
+  --bg0:#0b0812;
+  --bg1:#140b23;
+  --card:rgba(255,255,255,.06);
+  --card2:rgba(255,255,255,.09);
+  --stroke:rgba(255,255,255,.10);
+  --stroke2:rgba(255,255,255,.14);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.62);
+  --link:#ffb86b;
+  --shadow:0 18px 70px rgba(0,0,0,.55);
+
+  min-height:100vh;
+  padding: 42px 28px 120px;
+  background:
+    radial-gradient(1200px 700px at 10% 0%, rgba(160,120,255,.28), transparent 60%),
+    radial-gradient(900px 700px at 95% 8%, rgba(255,160,120,.18), transparent 58%),
+    radial-gradient(1100px 850px at 35% 78%, rgba(90,255,220,.08), transparent 60%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
+  color:var(--text);
+}
+
+.baHero{
+  max-width: 1180px;
+  margin: 0 auto 26px;
+}
+
+.baKicker{
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.baTitle{
+  font-size: 74px;
+  line-height: 0.95;
+  margin: 10px 0 10px;
+  font-weight: 750;
+}
+
+.baLead{
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+
+.baChips{ display:flex; gap:10px; flex-wrap:wrap; }
+.baChip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(0,0,0,.18);
+  color: rgba(255,255,255,.82);
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+}
+.baChip:hover{ border-color: var(--stroke2); }
+
+.baPanel{
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.08));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.baPanelHead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+  padding: 16px 16px 10px;
+}
+.baPanelTitle{ font-weight: 700; }
+.baPanelSub{ font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+.baSelectWrap{ display:flex; align-items:center; gap:10px; }
+.baSelectLabel{ font-size:12px; color: var(--muted); }
+.baSelect{
+  border-radius: 10px;
+  border: 1px solid var(--stroke);
+  background: rgba(0,0,0,.25);
+  color: rgba(255,255,255,.88);
+  padding: 6px 10px;
+  outline: none;
+}
+
+.baMapBox{
+  height: 360px;
+  padding: 12px 12px 16px;
+}
+.baMapBox .leaflet-container{
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  overflow: hidden;
+}
+.baMapBox .leaflet-control-zoom a{
+  background: rgba(0,0,0,.35);
+  color: rgba(255,255,255,.88);
+  border: 1px solid rgba(255,255,255,.18);
+}
+.baMapBox .leaflet-control-attribution{
+  background: rgba(0,0,0,.30);
+  color: rgba(255,255,255,.55);
+}
+
+.baSection{
+  max-width: 1180px;
+  margin: 0 auto 14px;
+  padding: 14px 0 0;
+}
+.baSectionHead{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 0 6px 10px;
+}
+.baH2{ margin:0; font-size: 42px; line-height: 1.05; }
+.baSectionMeta{ font-size: 12px; color: var(--muted); }
+
+.baTwoCol{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.baCard{
+  border:1px solid var(--stroke);
+  border-radius: 16px;
+  background: rgba(0,0,0,.20);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 55px rgba(0,0,0,.45);
+  padding: 14px;
+}
+.baCardTitle{ font-weight: 700; margin-bottom: 8px; }
+.baLinkList{ margin:0; padding-left: 18px; color: var(--muted); }
+.baLink{ color: var(--link); text-decoration: none; }
+.baLink:hover{ text-decoration: underline; }
+
+.baDay{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 16px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.baDayGrid{
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+.baDayLabel{
+  padding: 10px 6px;
+}
+.baDayNum{
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 700;
+}
+.baDayMeta{
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.baDayCard{
+  border:1px solid var(--stroke);
+  border-radius: 18px;
+  background: rgba(0,0,0,.18);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+.baPlaceList{ list-style:none; padding:0; margin: 10px 0 0; }
+.baPlaceItem{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.baPlaceItem:first-child{ border-top:none; }
+.baBullet{
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--link);
+  opacity: .9;
+  flex: 0 0 auto;
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .baTitle{ font-size: 58px; }
+}
+@media (max-width: 900px){
+  .baTwoCol{ grid-template-columns: 1fr; }
+  .baDayGrid{ grid-template-columns: 1fr; }
+  .baDayNum{ font-size: 34px; }
+  .baMapBox{ height: 300px; }
+}

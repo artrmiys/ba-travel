@@ -3,6 +3,9 @@ import Home from "./pages/Home";
 import BuenosAires from "./pages/BuenosAires";
 import { ATLAS } from "./data/atlas";
 
+import Globe3D from "./components/Globe3D";
+import { BuenosAiresAfterMap } from "./components/BuenosAiresAfterMap";
+
 function normalize(hash: string) {
   const h = hash.replace(/^#/, "");
   return h.startsWith("/") ? h : "/" + h;
@@ -22,6 +25,7 @@ export default function App() {
   };
 
   const active = useMemo(() => path.split("/").filter(Boolean), [path]); // [country, city]
+
   const isBA = path === "/argentina/buenos-aires";
 
   return (
@@ -44,7 +48,7 @@ export default function App() {
                     <button
                       key={ct.slug}
                       className={"sideItem " + (isActive ? "active" : "") + " " + (open ? "open" : "soon")}
-                      onClick={() => (open ? go(`/${c.slug}/${ct.slug}`) : null)}
+                      onClick={() => open ? go(`/${c.slug}/${ct.slug}`) : null}
                       title={open ? "Open" : "Soon"}
                     >
                       <span className="miniDot" />
@@ -59,7 +63,12 @@ export default function App() {
         </div>
       </aside>
 
-      <main className="main">{isBA ? <BuenosAires /> : <Home go={go} />}</main>
+      <main className="main">
+        {isBA ? <BuenosAires /> : <Home go={go} />}
+      </main>
+    </div>
+      </div>
+      <aside className="cityGlobeAside"><Globe3D /></aside>
     </div>
   );
 }

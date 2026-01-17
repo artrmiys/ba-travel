@@ -130,7 +130,7 @@ body::before{
 }
 
 .globeFrame{
-  height: 520px;
+  height: 360px;
   border-radius: 26px;
   border: 1px solid var(--line);
   background: rgba(0,0,0,.18);
@@ -298,7 +298,7 @@ body::before{
 
 /* globe */
 .globeWrap {
-  height: 100%; /* bigger globe */
+  height: 560px; /* bigger globe */
   width: 100%;
   border-radius: 14px;
   overflow: hidden;
@@ -379,7 +379,7 @@ a:hover { text-decoration: underline; }
 
 .globeFrameLarge { height: 420px; }
 @media (max-width: 900px) {
-  .globeFrameLarge { height: 520px; }
+  .globeFrameLarge { height: 360px; }
 }
 
 /* components/BuenosAiresAfterMap.tsx */
@@ -417,54 +417,3 @@ a:hover { text-decoration: underline; }
 }
 .link { color: var(--accent); text-decoration: none; }
 .link:hover { text-decoration: underline; }
-
-/* =========================
-   BA ref-style (как на gh-pages)
-   ========================= */
-
-.section{
-  margin-top: 18px;
-  padding: 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(0,0,0,.14);
-  box-shadow: 0 10px 30px rgba(0,0,0,.25);
-}
-
-.muted{
-  color: rgba(255,255,255,.68);
-  font-size: 13px;
-  line-height: 1.25;
-}
-
-.list{
-  margin: 10px 0 0;
-  padding-left: 18px;
-}
-
-.list li{
-  margin: 6px 0;
-}
-
-.section a{
-  color: #ffb86b;
-  text-decoration: none;
-}
-
-.section a:hover{
-  text-decoration: underline;
-}
-
-/* ===== Scrollbar (global) ===== */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(255,255,255,0.18) transparent;
-}
-*::-webkit-scrollbar { width: 10px; height: 10px; }
-*::-webkit-scrollbar-track { background: transparent; }
-*::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.14);
-  border-radius: 999px;
-  border: 2px solid rgba(0,0,0,0.35);
-}
-*::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
