@@ -570,3 +570,54 @@ a:hover { text-decoration: underline; }
   border: 2px solid transparent;
   background-clip: content-box;
 }
+
+/* ===== MOBILE: Globe must be visible ===== */
+@media (max-width: 900px) {
+  /* чтобы контент не выглядел "съехавшим" */
+  .main { padding: 12px 12px 48px !important; }
+
+  /* Hero: в одну колонку */
+  .cityHeroGrid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Глобус: фикс высоты */
+  .cityGlobeAside {
+    height: 420px !important;
+    min-height: 420px !important;
+  }
+  .globeWrap {
+    height: 420px !important;
+    min-height: 420px !important;
+    width: 100% !important;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  /* ВАЖНО: canvas растягиваем на 100% */
+  .globeWrap canvas {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+  }
+
+  /* Карта ниже: тоже фикс высоты */
+  .leafletRoot {
+    height: 360px !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+  }
+}
+
+/* маскируем белый скроллбар */
+:root { scrollbar-color: rgba(255,255,255,.22) transparent; }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,.18);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
