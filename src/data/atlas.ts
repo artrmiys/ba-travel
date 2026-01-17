@@ -13,7 +13,17 @@ export type Country = {
   cities: City[];
 };
 
-export const ATLAS: Country[] = [
+export const ATLAS: Country[
+{
+    name: "Аргентина",
+    slug: "argentina",
+    cities: [
+      { name: "Буэнос-Айрес", slug: "buenos-aires", lat: -34.6037, lng: -58.3816, status: "open", page: "ba" },
+      { name: "Мендоса", slug: "mendoza", lat: -32.8895, lng: -68.8458, status: "soon" },
+      { name: "Пуэрто-Мадрин", slug: "puerto-madryn", lat: -42.7692, lng: -65.0385, status: "soon" },
+    ],
+  },
+] = [
   {
     name: "Россия",
     slug: "russia",
@@ -60,16 +70,8 @@ export const ATLAS: Country[] = [
     slug: "turkey",
     cities: [{ name: "Стамбул", slug: "istanbul", lat: 41.0082, lng: 28.9784, status: "soon" }],
   },
-  {
-    name: "Аргентина",
-    slug: "argentina",
-    cities: [
-      { name: "Буэнос-Айрес", slug: "buenos-aires", lat: -34.6037, lng: -58.3816, status: "open", page: "ba" },
-      { name: "Мендоса", slug: "mendoza", lat: -32.8895, lng: -68.8458, status: "soon" },
-      { name: "Пуэрто-Мадрин", slug: "puerto-madryn", lat: -42.7692, lng: -65.0385, status: "soon" },
-    ],
-  },
-  {
+
+{
     name: "Чили",
     slug: "chile",
     cities: [

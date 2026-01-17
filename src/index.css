@@ -621,3 +621,10 @@ a:hover { text-decoration: underline; }
   border: 2px solid transparent;
   background-clip: content-box;
 }
+
+/* ===== FORCE MOBILE GLOBE SIZE (override last) ===== */
+@media (max-width: 900px) {
+  .cityGlobeAside { height: 320px !important; min-height: 320px !important; }
+  .globeWrap { height: 320px !important; min-height: 320px !important; }
+  .globeWrap canvas { width: 100% !important; height: 100% !important; display: block !important; }
+}
